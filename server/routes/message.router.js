@@ -23,7 +23,7 @@ router.get('/', function (req, res) {
       })//SELECT query
     } // end no error
   }); // end pool connect
-}); // end get /treats
+}); // end get
 
 router.post('/', function(req, res) {
   console.log('post route!', req.body);
