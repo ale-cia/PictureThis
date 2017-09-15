@@ -1,21 +1,22 @@
+<!-- alert('Hello, I'm Grace!); -->
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
 
     <h1 id="welcome" class="lead">Welcome, {{uc.userObject.userName}}!</h1>
-    <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
+    
 
     <div class="col-md-8">
         <!-- {{vm}} -->
     <form>
         <label for="message">Message: </label>
-        <input type="text" ng-model="vm.newMessage.name" id="name" placeholder="Name" />
+        <input type="text" ng-model="uc.newMessage.name" id="name" placeholder="Name" />
         <label for="location">Description: </label>
-        <input type="text" ng-model="vm.newMessage.description" id="description" placeholder="description" />
+        <input type="text" ng-model="uc.newMessage.description" id="description" placeholder="description" />
         <label for="location">Location: </label>
-        <input type="text" ng-model="vm.newMessage.location" id="location" placeholder="Location" />
+        <input type="text" ng-model="uc.newMessage.location" id="location" placeholder="Location" />
         
-        <button class="btn btn-primary" ng-click="vm.addMessage()">Add Message</button>
+        <button class="btn btn-primary" ng-click="uc.addMessage()">Add Message</button>
     </form>
     </div> <!--col-md-12-->
-
+    <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
 </div><!--container-->
