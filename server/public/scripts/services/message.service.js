@@ -2,7 +2,9 @@ myApp.service('MessageService', ['$http', function($http) {
     console.log('Message service loaded.');
 
     var vm = this;
-    vm.newMessage = { list: [] };
+    vm.messages = { list: [],
+    newMessage: {} 
+};
 
     self.getMessage = function() {
         $http.get('/message').then(function(response) {
@@ -15,7 +17,7 @@ myApp.service('MessageService', ['$http', function($http) {
     self.addMessage = function(newMessage) { 
         console.log('going to send this object to the server: ', newMessage);
                
-        $http.post('/message', newMessage).then(function(response) {
+        $http.post('/message', self.messages.newMessage).then(function(response) {
             console.log('service post response: ', response);
             self.getMessage();            
         });
