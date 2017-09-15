@@ -40,6 +40,5 @@ myApp.service('MessageService', ['$http', function($http) {
         });
         
     }
-
     
 }]);
