@@ -6,7 +6,13 @@
 
 var pg = require('pg');
 var url = require('url');
-var config = {};
+var config = {
+  database: 'spacechat',
+  host: 'localhost',
+  port: 5432,
+  max: 10,
+  idleTimeoutMillis: 20000
+};
 
 if (process.env.DATABASE_URL) {
   // Heroku gives a url, not a connection object
@@ -31,7 +37,7 @@ if (process.env.DATABASE_URL) {
     password: process.env.DATABASE_SECRET || null, //env var: PGPASSWORD
     host: process.env.DATABASE_SERVER || 'localhost', // Server hosting the postgres database
     port: process.env.DATABASE_PORT || 5432, //env var: PGPORT
-    database: process.env.DATABASE_NAME || 'solo-project', //env var: PGDATABASE
+    database: process.env.DATABASE_NAME || 'spacechat', //env var: PGDATABASE
     max: 10, // max number of clients in the pool
     idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
   };
