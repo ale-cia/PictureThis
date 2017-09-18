@@ -3,7 +3,7 @@ var router = express.Router();
 var pool = require('../modules/pool');
 
 router.get('/', function (req, res) {
-  pool.connect(function (error, db, done) { 
+  pool.connect(function (error, db, done) {
     if (error) {
       console.log('Error connecting to the DB', error);
       res.sendStatus( 500 );
@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
       return;
     } // end error
     else {
-     
+
       db.query('SELECT * FROM messages', function(err, result) {
 				done();
 				if(err) {
@@ -32,11 +32,11 @@ router.post('/', function(req, res) {
       if (error) {
           // when connecting to database failed
           console.log('Error connecting to database', err);
-          res.sendStatus(500);            
+          res.sendStatus(500);
       } else {
           // when connecting to database worked!
-          db.query('INSERT INTO messages (name, description, location) VALUES ($1, $2, $3);', 
-              [req.body.name, req.body.description, req.body.location], 
+          db.query('INSERT INTO messages (name, description, location) VALUES ($1, $2, $3);',
+              [req.body.name, req.body.description, req.body.location],
               function (errorMakingQuery, result) {
                   done();
                   if (errorMakingQuery) {
@@ -47,7 +47,7 @@ router.post('/', function(req, res) {
                   }
               });
       }
-  });   
+  });
 });
 
 router.put('/:id', function(req, res) {
@@ -60,7 +60,7 @@ router.put('/:id', function(req, res) {
       } else {
           // when connecting to database worked!
           db.query('UPDATE messages SET name = $1, description = $2, location = $3 WHERE id = $4',
-              [req.body.name, req.body.description, req.body.location, req.params.id], 
+              [req.body.name, req.body.description, req.body.location, req.params.id],
               function (err, result) {
                   done();
                   if (err) {
@@ -71,8 +71,8 @@ router.put('/:id', function(req, res) {
                   }
               });
       }
-  }); 
-  
+  });
+
 });
 
 router.delete('/:id', function(req, res) {
@@ -97,7 +97,7 @@ router.delete('/:id', function(req, res) {
                   }
               });
       }
-  }); 
-  
+  });
+
 });
 module.exports = router;
