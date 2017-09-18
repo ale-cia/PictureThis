@@ -11,7 +11,7 @@ var userRouter = require('./routes/user.router');
 var registerRouter = require('./routes/register.router');
 var messageRouter = require('./routes/message.router');
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 5011;
 
 // Body parser middleware
 app.use(bodyParser.json());

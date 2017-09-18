@@ -44,7 +44,7 @@ myApp.service('MessageService', ['$http', function($http) {
         $http.get('https://api.nasa.gov/planetary/apod?api_key=BNHQAzvHS60bKNnPfmgV2dlo1qW56zG91aE8Y8Mo').then(function(response) {
             console.log('get NASA response: ', response.data);
         });
-    };
+    };//getNASA
 
     // vm.getNasa();
 
@@ -52,7 +52,17 @@ myApp.service('MessageService', ['$http', function($http) {
         $http.get('https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=BNHQAzvHS60bKNnPfmgV2dlo1qW56zG91aE8Y8Mo').then(function(response) {
             console.log('get ASTEROID response: ', response.data);
         });
-    };
+    }; //getAsteroid
 
-    vm.getAsteroid();
+    // vm.getAsteroid();
+
+
+    vm.getMars = function() {
+        $http.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=BNHQAzvHS60bKNnPfmgV2dlo1qW56zG91aE8Y8Mo').then(function(response) {
+            console.log('get Mars response: ', response.data);
+        });
+    }; // getMars
+
+    vm.getMars();
+
 }]);
