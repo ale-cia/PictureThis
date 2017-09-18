@@ -28,6 +28,12 @@ CREATE TABLE "users" (
   "username" varchar(80) not null UNIQUE,
   "password" varchar(240) not null
 );
+
+CREATE TABLE messages (
+  message serial primary key,
+  description varchar(100) not null,
+  location varchar(240) not null
+);
 ```
 
 ## Screen Shot
