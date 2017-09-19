@@ -20,8 +20,12 @@
 <div class="">
   <ul>
       <li ng-repeat="messages in uc.messages.list">
-      {{ messages. name }} | {{ messages.description}} | {{ meassages.location }}</li>
+      {{ messages.name }} | {{ messages.description}} | {{ meassages.location }}</li>
   </ul>
+
+  <div class="col-lg-6">
+     
+  </div> <!--/col-lg-6--->
 
 </div>
     <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
