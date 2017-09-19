@@ -63,6 +63,6 @@ myApp.service('MessageService', ['$http', function($http) {
         });
     }; // getMars
 
-    vm.getMars();
+    // vm.getMars();
 
 }]);
