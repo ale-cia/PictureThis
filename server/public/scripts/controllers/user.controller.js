@@ -6,6 +6,8 @@ myApp.controller('UserController', function(UserService, MessageService) {
   var uc = this;
   // uc.messages = {};
   uc.messages = MessageService.messages;
+  uc.planets = MessageService.planets;
+  //pulling in from service
   uc.userService = UserService;
   uc.userObject = UserService.userObject;
   MessageService.getMessage();

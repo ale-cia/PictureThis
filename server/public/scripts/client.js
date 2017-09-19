@@ -31,6 +31,11 @@ myApp.config(function($routeProvider, $locationProvider) {
         }
       }
     })
+
+.when('/logout', {
+  templateUrl: 'views/templates/logout.html',
+  controller: 'LogoutController as loc'
+})
     .otherwise({
       redirectTo: 'home'
     });

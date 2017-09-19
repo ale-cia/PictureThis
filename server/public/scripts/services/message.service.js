@@ -6,7 +6,9 @@ myApp.service('MessageService', ['$http', function($http) {
       list: [] ,
       newMessage: {}
 };
-
+   vm.planets = {
+     mars: {}
+   }
     vm.getMessage = function() {
         $http.get('/message').then(function(response) {
             vm.messages.list = response.data;
@@ -60,6 +62,8 @@ myApp.service('MessageService', ['$http', function($http) {
     vm.getMars = function() {
         $http.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=BNHQAzvHS60bKNnPfmgV2dlo1qW56zG91aE8Y8Mo').then(function(response) {
             console.log('get Mars response: ', response.data);
+            vm.planets.mars = response.data;
+
         });
     }; // getMars
 
