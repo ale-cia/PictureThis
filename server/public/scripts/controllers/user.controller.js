@@ -10,8 +10,10 @@ myApp.controller('UserController', function(UserService, MessageService) {
   //pulling in from service
   uc.userService = UserService;
   uc.userObject = UserService.userObject;
-  MessageService.getMessage();
+  // MessageService.getMessage();
   uc.addMessage = MessageService.addMessage;
+  uc.searchResults = MessageService.searchResults;
+  uc.spaceImages = MessageService.spaceImages;
 //   uc.addMessage = function() {
 //     // have service send this to the server
 //     console.log('clicked to add new message', );
@@ -19,7 +21,7 @@ myApp.controller('UserController', function(UserService, MessageService) {
 // }
 
 uc.updateMessage = function(currentMessage) {
-    currentMessage.location = "Neptune";
+    // currentMessage.location = "";
     MessageService.updateMessage(currentMessage);
 }
 
