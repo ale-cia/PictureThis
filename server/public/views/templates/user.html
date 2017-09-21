@@ -31,28 +31,28 @@
   </div><!--/row--->
 </div><!--container-->
 
-{{ uc }}
+<!-- {{ uc }} -->
 <div class="container">
-  <div class="">
+  <div class="box">
    <div class="row">
-    <div class="col-md-6">
-        <div ng-repeat="pic in uc.spaceImages.list" class="card" style="width: 30rem;"><p>{{ pic.message}}</p>
-           <div class="card-block">
-             {{ pic }}
-           <img ng-src="{{pic.links[0].href}}"/>
-         </div><!--card-block-->
-          <h4 class="card-title">Image from Mars Rover</h4>
-            <p class="card-text">Some quick example</p>
+        <div ng-repeat="pic in uc.spaceImages.list" class="card col-md-4" style="width: 30rem;">
+          <p>{{pic.message}}</p>
+            <div class="card-block">
+             <!-- {{ pic }} -->
+            <img ng-src="{{pic.links[0].href}}"/>
+            <h4 class="card-title"></h4>
+            <!-- <p class="card-text">Some quick example</p> -->
             <button ng-click="uc.updateMessage(messasge)">Update</button>
             <button ng-click="uc.deleteMessage(message._id)">Delete</button>
-              <a href="#" class="btn btn-primary">Flip</a>
-       </div> <!--/mars-->
-      </div><!--card-->
-   </div><!--col-md-6-->
- </div><!--row-->
+            <a href="#" class="btn btn-primary">Flip</a>
+          </div> <!--/ng-repeat-->
+        </div><!--row-->
+ </div><!--box-->
+</div><!--card-block-->
+
 </div><!--container-->
 
-<div class="container">
+<!-- <div class="container">
 
 
-</div>
+</div> -->

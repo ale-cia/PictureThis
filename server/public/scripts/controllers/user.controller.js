@@ -4,6 +4,7 @@ myApp.controller('UserController', function(UserService, MessageService) {
   //
 
   var uc = this;
+  uc.spaceImages = {};
   // uc.messages = {};
   uc.messages = MessageService.messages;
   uc.planets = MessageService.planets;

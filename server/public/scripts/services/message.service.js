@@ -5,12 +5,12 @@ myApp.service('MessageService', ['$http', function($http) {
     vm.messages = {
       list: [] ,
       newMessage: {}
-};
+    };
    vm.planets = {
      mars: {}
    }
 
-   vm.spaceImages = {list: []};
+   vm.spaceImages = { list: [] };
     // vm.getMessage = function() {
     //     $http.get('/message').then(function(response) {
     //         vm.messages.list = response.data;
@@ -76,21 +76,28 @@ myApp.service('MessageService', ['$http', function($http) {
             console.log('get search response: ', response.data);
             // vm.planets.mars = response.data;
 
-            // //  for(var i = 0; collection.length-1; i++){
-            // //    if(vm.media_type = ".jpg"){
-            // //      console.log("correct image!", vm.media_type);
-            // //    } else {
-            // //      console.log("Not a .jpg");
-            // //    }
-            //     // console.log(vm.spaceImages);
-            //  }
             var min = 0; //minimum number that starts at 0 because array starts at 0
             var max = response.data.collection.items.length-1;//returns the length of the array minus one (The last index)
             var randomImageNumber = Math.floor(Math.random() * (1 + max - min) + min);//chooses a random image from the array within the min/max
             //Math.random = number between 0 - 1
             vm.spaceImages.list.push(response.data.collection.items[randomImageNumber]);
-               console.log(vm.spaceImages);
+               console.log('message service list: ', vm.spaceImages.list);
+
+                //Loop through the collection
+                //Return images with .jpg only
+
+                //
+                var collection = 0;
+
+                for(var i = 0; collection.length-1; i++){
+                  if(vm.media_type = ".jpg"){
+                    console.log("correct image!", vm.media_type);
+                  } else {
+                    console.log("Not a .jpg");
+                  }
+                   console.log(vm.spaceImages);
+                }
         });//get
     }; // searchResults
-  vm.searchResults();
+  // vm.searchResults();
 }]);
