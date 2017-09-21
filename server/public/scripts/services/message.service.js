@@ -78,6 +78,6 @@ myApp.service('MessageService', ['$http', function($http) {
             vm.spaceImages.list.push(response.data.collection.items[0]);
             console.log(vm.spaceImages);
         });
-    }; // getMars
-
+    }; // searchResults
+  vm.searchResults();
 }]);

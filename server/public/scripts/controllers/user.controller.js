@@ -8,7 +8,7 @@ myApp.controller('UserController', function(UserService, MessageService) {
   uc.messages = MessageService.messages;
   uc.planets = MessageService.planets;
   //pulling in from service
-  uc.userService = UserService;
+  // uc.userService = UserService.spaceImages;
   uc.userObject = UserService.userObject;
   // MessageService.getMessage();
   uc.addMessage = MessageService.addMessage;
