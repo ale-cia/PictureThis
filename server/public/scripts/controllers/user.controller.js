@@ -26,8 +26,15 @@ uc.updateMessage = function(currentMessage) {
     MessageService.updateMessage(currentMessage);
 }
 
-uc.deleteMessage= function(personId) {
-    MessageService.deleteMessage(messageId);
+uc.deleteMessage = function(personId, index) {
+    //MessageService.deleteMessage(messageId);
+    console.log('ted is cooler', personId);
+    console.log('index', index);
+    console.log('array?', uc.spaceImages);
+
+    uc.spaceImages.list.splice(index, 1);
 }
+
+
 
 });
