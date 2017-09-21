@@ -90,3 +90,7 @@ img {
   max-height: 75%;
   border-radius: 5px;
 }
+
+.card-block{
+  margin-top: 5px;
+}
