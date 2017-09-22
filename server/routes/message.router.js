@@ -28,7 +28,15 @@ router.get('/', function (req, res) {
 router.post('/', function(req, res) {
   console.log('message post route!', req.body);
 
-   
+   var description = req.body.data[0].description;
+   console.log('Description', description);
+
+   var image = req.body.links[0].href;
+   console.log('image', image);
+
+   //returns the value of pic an dobject and array
+
+
   pool.connect(function (error, db, done) {
       if (error) {
           // when connecting to database failed
@@ -36,8 +44,9 @@ router.post('/', function(req, res) {
           res.sendStatus(500);
       } else {
           // when connecting to database worked!
-          db.query('INSERT INTO messages (name, description, image) VALUES ($1, $2, $3);',
-              [req.body.name, req.body.description, req.body.location],
+          db.query('INSERT INTO messages ( description, image ) VALUES ($1, $2);',
+          //sanitizes the data
+              [description, image],
               function (errorMakingQuery, result) {
                   done();
                   if (errorMakingQuery) {
