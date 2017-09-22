@@ -34,8 +34,10 @@ router.post('/', function(req, res) {
    var image = req.body.links[0].href;
    console.log('image', image);
 
-   //returns the value of pic an dobject and array
+   var userId = req.user.id; //passport current user id
 
+   //returns the value of pic an dobject and array
+//blah
 
   pool.connect(function (error, db, done) {
       if (error) {
@@ -44,9 +46,9 @@ router.post('/', function(req, res) {
           res.sendStatus(500);
       } else {
           // when connecting to database worked!
-          db.query('INSERT INTO messages ( description, image ) VALUES ($1, $2);',
+          db.query('INSERT INTO messages ( description, image, user_id ) VALUES ($1, $2, $3);',
           //sanitizes the data
-              [description, image],
+              [description, image, userId],
               function (errorMakingQuery, result) {
                   done();
                   if (errorMakingQuery) {
