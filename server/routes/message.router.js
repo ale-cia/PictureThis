@@ -26,8 +26,9 @@ router.get('/', function (req, res) {
 }); // end get
 
 router.post('/', function(req, res) {
-  console.log('post route!', req.body);
+  console.log('message post route!', req.body);
 
+   
   pool.connect(function (error, db, done) {
       if (error) {
           // when connecting to database failed
@@ -35,7 +36,7 @@ router.post('/', function(req, res) {
           res.sendStatus(500);
       } else {
           // when connecting to database worked!
-          db.query('INSERT INTO messages (name, description, location) VALUES ($1, $2, $3);',
+          db.query('INSERT INTO messages (name, description, image) VALUES ($1, $2, $3);',
               [req.body.name, req.body.description, req.body.location],
               function (errorMakingQuery, result) {
                   done();

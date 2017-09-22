@@ -39,13 +39,17 @@
           <p>{{pic.message}}</p>
             <div class="card-block">
              <!-- {{ pic }} -->
-            <img ng-src="{{pic.links[0].href}}"/>
+            <img ng-if="pic.flip === true" ng-src="{{pic.links[0].href}}"/>
+            <p ng-if="pic.flip === false">{{ pic.data[0].description }}</p>
+            <!--Returns the description for the image-->
             <h4 class="card-title"></h4>
             <!-- <p class="card-text">Some quick example</p> -->
-            <button class="btn btn-warning" ng-click="uc.updateMessage(messasge)">Update</button>
-            <button class="btn btn-warning" ng-click="uc.saveMessage(messasge)">Save</button>
+            <button ng-if="pic.flip === false" class="btn btn-warning" ng-click="uc.updateMessage(messasge)">Update</button>
+            <!--When the image is false the update button appears-->
+            <button class="btn btn-warning" ng-click="uc.save(pic)">Save</button>
             <button class="btn btn-warning" ng-click="uc.deleteMessage(pic, $index)">Delete</button>
-            <button class="btn btn-primary" ng-click="uc.flip()">Flip</button>
+            <button class="btn btn-primary" ng-click="uc.flip($index)">Flip</button>
+            <!--  Determines which part of the array to flip-->
           </div> <!--/ng-repeat-->
         </div><!--row-->
  </div><!--box-->

@@ -1,4 +1,4 @@
-myApp.controller('UserController', function(UserService, MessageService) {
+myApp.controller('UserController', function( UserService,$http, MessageService) {
   console.log('UserController created');
 
   //
@@ -15,6 +15,9 @@ myApp.controller('UserController', function(UserService, MessageService) {
   uc.addMessage = MessageService.addMessage;
   uc.searchResults = MessageService.searchResults;
   uc.spaceImages = MessageService.spaceImages;
+
+
+
 //   uc.addMessage = function() {
 //     // have service send this to the server
 //     console.log('clicked to add new message', );
@@ -33,6 +36,27 @@ uc.deleteMessage = function(personId, index) {
     console.log('array?', uc.spaceImages);
 
     uc.spaceImages.list.splice(index, 1);
+}
+
+uc.flip = function (ted) {
+  console.log('ted is the coolest', uc.spaceImages.list[ted].flip);
+  console.log('jelly, jelly', uc.spaceImages);
+  console.log('track', uc.spaceImages.list[ted].data[0].description);
+  //pic.data[0].description = uc.spaceImages.list
+  //uc.spaceImages.list[].data[].description
+  if(uc.spaceImages.list[ted].flip === true){
+    uc.spaceImages.list[ted].flip = false;
+  } else {
+    uc.spaceImages.list[ted].flip = true;
+  }
+}//function
+
+uc.save = function(pic){
+  console.log('save me', pic);
+  $http.post('/message', pic).then(function(response) {
+   console.log('got response: ', response.data);
+ });
+
 }
 
 

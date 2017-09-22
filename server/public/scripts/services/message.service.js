@@ -80,8 +80,12 @@ myApp.service('MessageService', ['$http', function($http) {
             var max = response.data.collection.items.length-1;//returns the length of the array minus one (The last index)
             var randomImageNumber = Math.floor(Math.random() * (1 + max - min) + min);//chooses a random image from the array within the min/max
             //Math.random = number between 0 - 1
+
+            // Add a property to this response to make flip = true
+            response.data.collection.items[randomImageNumber].flip = true; //add boolean property
             vm.spaceImages.list.push(response.data.collection.items[randomImageNumber]);
                console.log('message service list: ', vm.spaceImages.list);
+
 
                 //Loop through the collection
                 //Return images with .jpg only
