@@ -36,8 +36,7 @@ router.post('/', function(req, res) {
 
    var userId = req.user.id; //passport current user id
 
-   //returns the value of pic an dobject and array
-//blah
+   //returns the value of pic an object and array
 
   pool.connect(function (error, db, done) {
       if (error) {
