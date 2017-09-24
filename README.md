@@ -30,9 +30,10 @@ CREATE TABLE "users" (
 );
 
 CREATE TABLE messages (
-  message serial primary key,
-  description varchar(100) not null,
-  location varchar(240) not null
+  id integer serial primary key,
+  description character varying(2000) NOT NULL,
+  image character varying(100) NOT NULL,
+  user_id integer not null
 );
 ```
 
