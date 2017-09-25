@@ -32,10 +32,18 @@ myApp.config(function($routeProvider, $locationProvider) {
       }
     })
 
-.when('/logout', {
-  templateUrl: 'views/templates/logout.html',
-  controller: 'LogoutController as loc'
-})
+    // .when('/thanks', {
+    //   templateUrl: '/views/templates/thanks.html',
+    //   controller: 'ThanksController'
+    // })
+    // .otherwise({
+    //   redirectTo: '/home'
+    // });
+
+  .when('/logout', {
+    templateUrl: 'views/templates/logout.html',
+    controller: 'LogoutController as loc'
+  })
     .otherwise({
       redirectTo: '/home'
     });
