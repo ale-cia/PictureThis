@@ -2,20 +2,29 @@
 
 <div class="container">
 
-    <h1 id="welcome" class="lead">Welcome, {{uc.userObject.userName}}!</h1>
+    <h4 id="welcome" class="uname">Hi, {{uc.userObject.userName}}!</h4>
     <div class="col-md-6">
       <!-- <img ng-repeat="pic in uc.planets.mars.photos | limitTo: 2" ng-src="pic.img_src"> -->
         <!-- {{uc.planets.mars.photos}} -->
     <form>
         <label for="message"> </label>
-        <input class="form-control" type="text" ng-model="uc.messages.newMessage.name" id="name" placeholder="Enter text" />
-        <!--  -->
+        <!-- <input class="form-control" type="text" ng-model="uc.messages.newMessage.name" id="name" placeholder="Enter text" /> -->
+        <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" id="name" class="form-control fixed-top" ng-model="uc.messages.newMessage.name"  placeholder="Search for...">
+          <!-- <span class="input-group-btn"> -->
+            <button type="button" class="btn btn-outline-warning" ng-click="uc.searchResults()">Go!</button>
+          <!-- </span> -->
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+
+
         <!-- <label for="location">Description: </label>
         <input type="text" ng-model="uc.messages.newMessage.description" id="description" placeholder="description" />
         <label for="location">Location: </label>
         <input type="text" ng-model="uc.messages.newMessage.location" id="location" placeholder="Location" /> -->
 
-        <button class="btn btn-outline-warning search" ng-click="uc.searchResults()">Search</button>
+        <!-- <button id="search" class="btn btn-outline-warning"  ng-click="uc.searchResults()">Search</button> -->
     </form>
   </div> <!--col-md-8-->
   <div class="row">
@@ -46,22 +55,29 @@
             <!--Returns the description for the image-->
             <h4 class="card-title"></h4>
             <!-- <p class="card-text">Some quick example</p> -->
-            <button ng-if="pic.flip === false" class="btn btn-warning" ng-click="uc.updateMessage(messasge)">Update</button>
+            <button class="btn btn-outline-warning" ng-if="pic.flip === false" class="btn btn-warning" ng-click="uc.updateMessage(messasge)">Update</button>
             <!--When the image is false the update button appears-->
-            <button class="btn btn-warning" ng-click="uc.save(pic)">Save</button>
-            <button class="btn btn-warning" ng-click="uc.deleteMessage(pic, $index)">Delete</button>
-            <button class="btn btn-primary" ng-click="uc.flip($index)">Flip</button>
+            <button class="btn btn-outline-primary" ng-click="uc.save(pic)">Save</button>
+            <button class="btn btn-outline-secondary flip" ng-click="uc.flip($index)">Flip</button>
+            <button class="btn btn-outline-danger" ng-click="uc.deleteMessage(pic, $index)"><i class="fa fa-trash-o" aria-hidden="true"></i>
+</button>
             <!--  Determines which part of the array to flip-->
-          </div> <!--/ng-repeat-->
-        </div><!--row-->
-
-
- </div><!--box-->
-</div><!--card-block-->
+          </div> <!--/card-block-->
+        </div><!--ng-repeat-->
+ </div><!--row-->
+</div><!--box-->
 
 </div><!--container-->
 
-<!-- <div class="container">
+<!--
+<div id="footer">
+  <div class="container">
+    <p class="footer-block">Image provided by <a href="https://unsplash.com/search/photos/stars?photo=0o_GEzyargo">Rafael Cerqueira</a> </p>
+  </div><!-container-->
+</div><!--footer-->
 
-
-</div> -->
+    <!-- <footer class="footer">
+      <div class="footer-container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer> -->

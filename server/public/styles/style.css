@@ -40,9 +40,19 @@ body, html {
   color: #fff;
 }
 
-.search{
-  display: inline-block;
+#name {
+   width: 150px;
+   /*margin-left: -5px;*/
 }
+
+#text {
+  margin-left: -15px;
+}
+
+.form-control {
+ margin-left: 75px;
+}
+
 .container p{
   margin-top : 14px;
 }
@@ -76,9 +86,17 @@ body, html {
   margin-bottom: 20px;
 }
 
-input[type=text] {
-  width: 100px;
+.uname {
+  padding-left: 92px;
 }
+
+#lead {
+  /*padding-left: 92px;*/
+  text-align: center;
+}
+/*input[type=text] {
+  width: 100px;
+}*/
 
 ul {
   list-style-type: none;
@@ -126,9 +144,42 @@ li a:hover {
 }
 
 .intro_two {
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.spaceCards {
+#spaceCards {
   font-size: 60px;
+  /*padding-left: 100px;*/
+  text-align: center;
 }
+
+.btn .btn-danger {
+  background-color: black;
+}
+
+.flip {
+  color: #000 !important;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+/*.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+.footer-container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.footer-container .text-muted {
+  margin: 20px 0;
+}*/
