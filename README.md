@@ -6,7 +6,7 @@ This is a flash card app to teach people about our galaxy, space, planets and st
 
 Bootstrap
 Font Awesome
-SEAN Stack
+
 
 ## Getting Started
 
@@ -16,7 +16,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 Link to software that is required to install the app (e.g. node).
 
-- PostGreSQL
+- PostGreSQL  - Can be installed using Homebrew
+  * Open a terminal
+  * Type brew install postgres (and type enter key)
 - [Postico](https://eggerapps.at/postico)
 - Express
 - AngularJS
