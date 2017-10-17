@@ -17,12 +17,12 @@ These instructions will get you a copy of the project up and running on your loc
 Link to software that is required to install the app (e.g. node).
 
 - PostGreSQL
-- [Postico] (https://eggerapps.at/postico)
+- [Postico](https://eggerapps.at/postico)
 - Express
 - AngularJS
 - [Node.js](https://nodejs.org/en/)
 - Passport.js
--
+
 
 ### Installing
 
@@ -55,7 +55,7 @@ High level list of items completed.
 - [x] API returns image and description
 - [x] Search items can be saved to the database
 - [x] Flash Cards can be deleted
-- [x] The flip button displays the the descritpion on the back of the card
+- [x] The flip button displays the the description on the back of the card
 
 
 ### Next Steps
