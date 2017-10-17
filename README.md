@@ -5,9 +5,12 @@ This is a flash card app to teach people about our galaxy, space, planets and st
 ## Built With
 
 - Bootstrap
+- CSS 3
 - Font Awesome
+- HTML5
 - Express
 - AngularJS
+- NASA's Image [API](https://api.nasa.gov/api.html#images-endpoints)
 - Node.js
 - Passport.js
 - PostGreSQL
