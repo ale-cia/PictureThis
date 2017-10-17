@@ -44,7 +44,7 @@ CREATE TABLE cards (
   user_id integer not null
 );
 ```
-### Run ```npm install``` in the project directory to install all project dependiencies
+**Run ```npm install``` in the project directory to install all project dependiencies**
 
 ## Screen Shot
 ![Welcome User](/images/spaceCards)
