@@ -4,10 +4,14 @@ This is a flash card app to teach people about our galaxy, space, planets and st
 
 ## Built With
 
-Bootstrap
-Font Awesome
-
-
+- Bootstrap
+- Font Awesome
+- Express
+- AngularJS
+- Node.js
+- Passport.js
+- PostGreSQL
+- npm 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -21,11 +25,8 @@ Link to software that is required to install the app (e.g. node).
   * Type brew install postgres (and type enter key)
 - [Postico](https://eggerapps.at/postico)
   * Create database and copy and paste the queries below
-- Express
-- AngularJS
 - [Node.js](https://nodejs.org/en/)
-- Passport.js
-
+- For npm install, make sure you're in the project directory and run this code from the terminal ```npm install npm@latest -g```
 
 ### Installing
 Steps to get the development environment running. Here are the SQL database tables.
