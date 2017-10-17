@@ -28,7 +28,7 @@ Link to software that is required to install the app (e.g. node).
 - [Node.js](https://nodejs.org/en/)
 - For npm install, make sure you're in the project directory and run this code from the terminal ```npm install npm@latest -g```
 
-### Installing
+### Database Setup
 Steps to get the development environment running. Here are the SQL database tables.
 
 ```sql
