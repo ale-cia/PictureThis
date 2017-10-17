@@ -10,7 +10,7 @@ This is a flash card app to teach people about our galaxy, space, planets and st
 - HTML5
 - Express
 - AngularJS
-- NASA's Image [API](https://api.nasa.gov/api.html#images-endpoints)
+- NASA's Open Image [API](https://api.nasa.gov/api.html#images-endpoints)
 - Node.js
 - Passport.js
 - PostGreSQL
