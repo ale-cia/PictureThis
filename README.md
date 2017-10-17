@@ -28,7 +28,6 @@ Link to software that is required to install the app (e.g. node).
 
 
 ### Installing
-
 Steps to get the development environment running. Here are the SQL database tables.
 
 ```sql
@@ -45,6 +44,7 @@ CREATE TABLE cards (
   user_id integer not null
 );
 ```
+**Run ```npm install``` in the project directory to install all project dependiencies
 
 ## Screen Shot
 ![Welcome User](/images/spaceCards)
