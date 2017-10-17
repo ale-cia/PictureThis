@@ -37,7 +37,7 @@ CREATE TABLE "users" (
   "password" varchar(240) not null
 );
 
-CREATE TABLE cards (
+CREATE TABLE messages (
   id integer serial primary key,
   description character varying(2000) NOT NULL,
   image character varying(100) NOT NULL,
