@@ -7,7 +7,6 @@ This is a flash card app to teach people about our galaxy, space, planets and st
 Bootstrap
 Font Awesome
 SEAN Stack
-Image taken from unsplash.com
 
 ## Getting Started
 
@@ -17,9 +16,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 Link to software that is required to install the app (e.g. node).
 
+- PostGreSQL
+- [Postico] (https://eggerapps.at/postico)
+- Express
+- AngularJS
 - [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
-
+- Passport.js
+-
 
 ### Installing
 
@@ -32,7 +35,7 @@ CREATE TABLE "users" (
   "password" varchar(240) not null
 );
 
-CREATE TABLE messages (
+CREATE TABLE cards (
   id integer serial primary key,
   description character varying(2000) NOT NULL,
   image character varying(100) NOT NULL,
@@ -41,16 +44,19 @@ CREATE TABLE messages (
 ```
 
 ## Screen Shot
-
-Include one or two screen shots of your project here (optional). Remove if unused.
+![Welcome User](/images/spaceCards)
 
 
 ### Completed Features
 
 High level list of items completed.
 
-- [x] Feature a
-- [x] Feature b
+- [x] Search box
+- [x] API returns image and description
+- [x] Search items can be saved to the database
+- [x] Flash Cards can be deleted
+- [x] The flip button displays the the descritpion on the back of the card
+
 
 ### Next Steps
 
