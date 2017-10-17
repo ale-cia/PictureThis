@@ -20,6 +20,7 @@ Link to software that is required to install the app (e.g. node).
   * Open a terminal
   * Type brew install postgres (and type enter key)
 - [Postico](https://eggerapps.at/postico)
+  * Create database and copy and paste the queries below
 - Express
 - AngularJS
 - [Node.js](https://nodejs.org/en/)
