@@ -12,9 +12,9 @@ This is a flash card app to teach people about our galaxy, space, planets and st
 - AngularJS
 - NASA's Open Image [API](https://api.nasa.gov/api.html#images-endpoints)
 - Node.js
+- npm 
 - Passport.js
 - PostGreSQL
-- npm 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -70,6 +70,7 @@ High level list of items completed.
 Features that you would like to add at some point in the future.
 
 - [ ] Angular Card Flip
+- [ ] Angular Material
 
 ## Deployment
 
