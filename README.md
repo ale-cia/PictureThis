@@ -22,7 +22,7 @@ Link to software that is required to install the app (e.g. node).
 
 - PostGreSQL  - Can be installed using Homebrew
   * Open a terminal
-  * Type brew install postgres (and type enter key)
+  * Type ```brew install postgres``` and hit enter key
 - [Postico](https://eggerapps.at/postico)
   * Create database and copy and paste the queries below
 - [Node.js](https://nodejs.org/en/)
