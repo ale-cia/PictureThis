@@ -31,23 +31,23 @@ uc.updateMessage = function(currentMessage) {
 
 uc.deleteMessage = function(personId, index) {
     //MessageService.deleteMessage(messageId);
-    console.log('ted is cooler', personId);
+    console.log('MessagedDeleted', personId);
     console.log('index', index);
     console.log('array?', uc.spaceImages);
 
     uc.spaceImages.list.splice(index, 1);
 }
 
-uc.flip = function (ted) {
-  console.log('ted is the coolest', uc.spaceImages.list[ted].flip);
-  console.log('jelly, jelly', uc.spaceImages);
-  console.log('track', uc.spaceImages.list[ted].data[0].description);
+uc.flip = function (card) {
+  console.log('Card flipped', uc.spaceImages.list[card].flip);
+  console.log('Display image', uc.spaceImages);
+  console.log('track', uc.spaceImages.list[card].data[0].description);
   //pic.data[0].description = uc.spaceImages.list
   //uc.spaceImages.list[].data[].description
-  if(uc.spaceImages.list[ted].flip === true){
-    uc.spaceImages.list[ted].flip = false;
+  if(uc.spaceImages.list[card].flip === true){
+    uc.spaceImages.list[card].flip = false;
   } else {
-    uc.spaceImages.list[ted].flip = true;
+    uc.spaceImages.list[card].flip = true;
   }
 }//function
 
