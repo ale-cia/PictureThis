@@ -77,4 +77,4 @@ Features that you would like to add at some point in the future.
 
 ## Authors
 
-* Alecia H.
+* ale-cia
